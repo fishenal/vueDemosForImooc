@@ -45,6 +45,20 @@ cnpm install axios --save
 使用Axios在项目里发送请求，在需要使用ajax的组件内，引用axios，根据标准接口使用，是Promise对象
 
 
-d, 搭建一个模拟数据的服务
+d, 使用 mockjs 模拟请求数据
 cnpm install mockjs --dev-save
 
+
+import Mock from 'mockjs'
+Mock.mock(/userList/, {
+    'list|1-10': [{
+        'id|+1': 1,
+        'email': '@EMAIL'
+    }]
+})
+Mock.mock(/userName/, {
+    'list|1-10': [{
+        'id|+1': 1,
+        'email': '@EMAIL'
+    }]
+})
